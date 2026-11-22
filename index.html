@@ -8,8 +8,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%230b1220' stroke-width='3'%3E%3Cpolygon points='32,4 56,18 56,46 32,60 8,46 8,18'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%230b1220'/%3E%3C/g%3E%3C/svg%3E">
 <style>
   :root{
-    --ink:#e8ecf3; --ink-soft:#8a94a8; --line:#1c2638; --paper:#060a12;
-    --white:#0b1120; --accent:#4d8bff; --accent-2:#19d3c5; --gold:#c9a45c;
+    --ink:#ededed; --ink-soft:#8c8c8c; --line:#262626; --paper:#0a0a0a;
+    --white:#111111; --accent:#d4d4d4; --accent-2:#f5f5f5; --gold:#6b6b6b;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -17,7 +17,7 @@
   a{color:inherit;text-decoration:none}
 
   /* NAV */
-  nav{position:fixed;inset:0 0 auto 0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:22px 6vw;background:rgba(6,10,18,.72);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
+  nav{position:fixed;inset:0 0 auto 0;z-index:10;display:flex;align-items:center;justify-content:space-between;padding:22px 6vw;background:rgba(10,10,10,.75);backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:border-color .3s}
   nav.scrolled{border-color:var(--line)}
   .brand{display:flex;align-items:center;gap:12px;font-weight:300;letter-spacing:.32em;font-size:14px;text-transform:uppercase}
   .brand b{font-weight:600}
@@ -25,7 +25,7 @@
   .links a:hover{color:var(--ink)}
 
   /* HERO — monolithic, centred */
-  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 6vw 100px;overflow:hidden;background:radial-gradient(1100px 620px at 50% 45%,#101a30 0%,var(--paper) 65%)}
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 6vw 100px;overflow:hidden;background:radial-gradient(1100px 620px at 50% 45%,#1c1c1c 0%,var(--paper) 65%)}
   #net{position:absolute;inset:0;width:100%;height:100%;opacity:.7}
   .hero-inner{position:relative;max-width:980px;display:flex;flex-direction:column;align-items:center}
   .mark{width:118px;height:118px;color:var(--ink);margin-bottom:34px}
@@ -43,9 +43,9 @@
   .lede em{font-style:normal;color:var(--ink)}
   .cta{margin-top:46px;display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
   .btn{display:inline-flex;align-items:center;gap:12px;padding:16px 30px;font-size:12px;letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--ink);transition:all .25s}
-  .btn.primary{background:var(--ink);color:#060a12}
-  .btn.primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}
-  .btn:not(.primary):hover{background:var(--ink);color:#060a12}
+  .btn.primary{background:var(--ink);color:#0a0a0a}
+  .btn.primary:hover{background:#fff;border-color:#fff;color:#0a0a0a}
+  .btn:not(.primary):hover{background:var(--ink);color:#0a0a0a}
   .scroll{position:absolute;bottom:34px;left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink-soft);display:flex;flex-direction:column;align-items:center;gap:12px}
   .scroll span{width:1px;height:46px;background:linear-gradient(var(--ink),transparent);animation:drip 2.2s infinite}
   @keyframes drip{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
@@ -64,9 +64,9 @@
   .projects-head p{max-width:380px;color:var(--ink-soft);font-weight:300}
   .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:80px;background:var(--line);border:1px solid var(--line)}
   .card{position:relative;display:flex;flex-direction:column;background:var(--paper);transition:background .3s}
-  .card:hover{background:#0a1222}
-  .visual{position:relative;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(320px 220px at 50% 50%,#101a30,#060a12)}
-  .visual img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.85) brightness(.85);transition:transform 1.2s ease,filter .4s}
+  .card:hover{background:#141414}
+  .visual{position:relative;aspect-ratio:16/10;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(320px 220px at 50% 50%,#1c1c1c,#0a0a0a)}
+  .visual img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) brightness(.8) contrast(1.05);transition:transform 1.2s ease,filter .5s}
   .card:hover .visual img{transform:scale(1.04);filter:none}
   .visual svg{position:absolute;inset:0;margin:auto;width:46%;height:auto}
   .card:hover .visual .orbit{animation-duration:6s}
@@ -115,7 +115,7 @@
   @media (max-width:860px){.ms li{grid-template-columns:56px 1fr}}
   .hw{margin-top:50px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
   .hw span{color:var(--ink-soft);letter-spacing:.1em}
-  .tesla{position:relative;margin-top:60px;border:1px solid var(--line);background:radial-gradient(500px 360px at 50% 45%,#0f1830,#060a12)}
+  .tesla{position:relative;margin-top:60px;border:1px solid var(--line);background:radial-gradient(500px 360px at 50% 45%,#1a1a1a,#0a0a0a)}
   .tesla canvas{display:block;width:100%;height:640px;cursor:crosshair}
   @media (max-width:860px){.tesla canvas{height:420px}}
   footer{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:34px 6vw;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--ink-soft);border-top:1px solid var(--line);background:var(--paper)}
@@ -189,16 +189,16 @@
     <article class="card r">
       <div class="visual">
         <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
-          <circle cx="100" cy="100" r="78" stroke="#1c2638"/>
-          <circle cx="100" cy="100" r="52" stroke="#2a3a58"/>
+          <circle cx="100" cy="100" r="78" stroke="#2a2a2a"/>
+          <circle cx="100" cy="100" r="52" stroke="#3a3a3a"/>
           <g class="orbit">
-            <circle cx="100" cy="22" r="4" fill="#4d8bff"/>
-            <circle cx="167.5" cy="139" r="3" fill="#19d3c5"/>
-            <circle cx="32.5" cy="139" r="3" fill="#e8ecf3"/>
-            <path d="M100 22L167.5 139 32.5 139Z" stroke="rgba(150,185,250,.35)"/>
+            <circle cx="100" cy="22" r="4" fill="#f0f0f0"/>
+            <circle cx="167.5" cy="139" r="3" fill="#bdbdbd"/>
+            <circle cx="32.5" cy="139" r="3" fill="#ededed"/>
+            <path d="M100 22L167.5 139 32.5 139Z" stroke="rgba(220,220,220,.3)"/>
           </g>
-          <circle cx="100" cy="100" r="14" fill="#4d8bff" opacity=".9"/>
-          <circle cx="100" cy="100" r="26" stroke="#4d8bff" opacity=".4"/>
+          <circle cx="100" cy="100" r="14" fill="#f0f0f0" opacity=".9"/>
+          <circle cx="100" cy="100" r="26" stroke="#f0f0f0" opacity=".4"/>
         </svg>
       </div>
       <div class="body">
@@ -301,12 +301,12 @@ const D=150*devicePixelRatio;
   for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;}
   for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){
     const a=P[i],b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);
-    if(d<D){x.strokeStyle=`rgba(170,195,240,${(1-d/D)*.18})`;x.lineWidth=devicePixelRatio*.7;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}
+    if(d<D){x.strokeStyle=`rgba(200,200,200,${(1-d/D)*.18})`;x.lineWidth=devicePixelRatio*.7;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke();}
   }
   for(const p of P){
     const dm=Math.hypot(p.x-m.x,p.y-m.y),near=dm<D*1.3;
-    if(near){x.strokeStyle=`rgba(77,139,255,${(1-dm/(D*1.3))*.5})`;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke();}
-    x.fillStyle=p.h||near?'#4d8bff':'rgba(200,215,240,.55)';
+    if(near){x.strokeStyle=`rgba(235,235,235,${(1-dm/(D*1.3))*.5})`;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(m.x,m.y);x.stroke();}
+    x.fillStyle=p.h||near?'#f2f2f2':'rgba(190,190,190,.5)';
     x.beginPath();x.arc(p.x,p.y,p.r*(p.h?1.8:1),0,Math.PI*2);x.fill();
   }
   requestAnimationFrame(loop);
