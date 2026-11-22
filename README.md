@@ -1,6 +1,6 @@
 # Cognitronics
 
-**Intelligence, engineered.**
+**From vision to reality.** *Ideas, envisioned.*
 
 > The future will not be programmed. It will be taught.
 
@@ -24,6 +24,14 @@ but by building agents that discover the world on their own, the way a child doe
 | I. | **Cognitive Systems** | How do we build agents that reason, remember and act – locally? |
 | II. | **Sovereign Infrastructure** | How do we get private compute and private data – intelligence without dependency? |
 | III. | **Emergent Life** | Can an artificial creature learn from curiosity alone? |
+
+## Projects
+
+| Project | What | Links |
+|---|---|---|
+| **NikolAI** | Our own AI: a neural agent that learns English from scratch | [GitHub](https://github.com/Cognitronics/nikolai) · [Live](https://nikolai.cognitronics.ai) |
+| **Singularity** | The game: 1920s Manhattan strategy across parallel universes | [GitHub](https://github.com/Cognitronics/singularity) · [itch.io](https://silly-argument-9763.itch.io/) |
+| **Calendar** | Coming soon | – |
 
 ## Flagship project: NikolAI
 
